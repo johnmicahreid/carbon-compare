@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = 'container'>
+  <h1>Carbon Calculator</h1>
+  <form method="POST">
+      <p>Choose the values and units below</p>
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.quantity1 }}{{ form.item1 }}
+      <p> equals </p>
+      {{ form.item2 }}
+      {{ form.submit() }}
+  </form>
+</div>
+
+{% endblock %}

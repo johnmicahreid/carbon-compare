@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "container">
+    <h1>Carbon report</h1>
+    <p> {{session['quantity1']}} {{session['item1']}} <b>equals</b>  {{session['quantity2']}} {{session['item2']}}</p>
+
+    <a class="btn btn-primary" href="{{url_for('index')}}" role="button">Calculate another result</a>
+
+</div>
+
+
+{% endblock %}
